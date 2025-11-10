@@ -23,6 +23,34 @@ export const options = {
   summaryTrendStats: ["avg", "min", "max", "p(50)", "p(75)", "p(90)", "p(95)", "p(99)"],
 };
 
+export function setup() {
+  let startTime = new Date().toISOString();
+  console.log(`
+    ========================================================
+    🟢 TES DIMULAI (Waktu Mulai)
+    Silakan copy waktu ini ke Grafana "From":
+    
+    ${startTime}
+    
+    ========================================================
+    `);
+  
+  return { testStartTime: startTime };
+}
+
+export function teardown(data) {
+  let endTime = new Date().toISOString();
+  console.log(`
+    ========================================================
+    🔴 TES SELESAI (Waktu Selesai)
+    Silakan copy waktu ini ke Grafana "To":
+    
+    ${endTime}
+    
+    ========================================================
+    `);
+}
+
 export default function () {
-  http.get(''); //your endpoint
+  http.get('');
 }
