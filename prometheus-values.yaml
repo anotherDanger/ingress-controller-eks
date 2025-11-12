@@ -1,0 +1,10 @@
+prometheus:
+  prometheusSpec:
+    additionalArgs:
+      - name: web.enable-remote-write-receiver
+  service:
+    type: LoadBalancer
+
+grafana:
+  service:
+    type: LoadBalancer
