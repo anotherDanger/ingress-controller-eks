@@ -227,22 +227,6 @@ resource "aws_instance" "k6_traefik" {
   }
 }
 
-output "eks_nginx_endpoint" {
-  value = module.eks_nginx.cluster_endpoint
-}
-
-output "eks_nginx_name" {
-  value = module.eks_nginx.cluster_name
-}
-
-output "eks_traefik_endpoint" {
-  value = module.eks_traefik.cluster_endpoint
-}
-
-output "eks_traefik_name" {
-  value = module.eks_traefik.cluster_name
-}
-
 output "k6_nginx_public_ip" {
   value = aws_instance.k6_nginx.public_ip
 }
