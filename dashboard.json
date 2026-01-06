@@ -840,7 +840,7 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "expr": "k6_http_req_duration_95{scenario=\"default\", status=\"200\"}",
+          "expr": "k6_http_req_duration_p95{scenario=\"default\", status=\"200\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "__auto",
@@ -1423,12 +1423,12 @@
     ]
   },
   "time": {
-    "from": "2025-11-10T20:51:55.000Z",
-    "to": "2025-11-10T21:01:55.000Z"
+    "from": "now-15m",
+    "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "k6 Prometheus",
   "uid": "ccbb2351-2ae2-462f-ae0e-f2c893ad1028",
-  "version": 8
+  "version": 2
 }
